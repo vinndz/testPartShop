@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="zxx">
 
@@ -53,7 +52,7 @@
 
         /* LOGO */
         .hero-logo {
-            width: 150px; /* default ukuran desktop lebih kecil */
+            width: 120px; /* default ukuran desktop lebih kecil */
             margin-top: 50px;
             margin-bottom: 20px;
         }
@@ -303,6 +302,57 @@
             opacity: 0.5 !important;
         }
 
+
+        /* Desktop saja */
+        @media (min-width: 992px) {
+    /* Pastikan wrapper flex dan center */
+    .main-menu__wrap.navbar {
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center;     /* vertical center */
+        height: 70px;
+        background: white;       /* atau transparan */
+        border-radius: 12px;     /* jika ingin rounded */
+        padding: 0 20px;
+    }
+
+    /* Nav collapse flex center */
+    .main-menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Menu horizontal rapi */
+    .main-menu .navbar-nav {
+        display: flex;
+        gap: 40px; /* jarak antar menu */
+        margin: 0; /* pastikan tidak ada margin */
+    }
+
+    .main-menu .nav-link {
+        line-height: 70px; /* vertical align */
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #000;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__wrap {
+        justify-content: center; /* dari space-between ke center */
+    }
+}
+
+
+
+
+
+
+
+
+
+
     </style>
 </head>
 
@@ -338,25 +388,18 @@
             <div class="xb-header stricky">
                 <div class="container-fluid p-0">
                     <div class="header__wrap ul_li_between" style="bacground: transparent;">
-
-                        <!-- LOGO -->
-                        <!-- <div class="xb-header-logo">
-                            <a href="index.html" class="logo1">
-                                <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
-                            </a>
-                        </div> -->
-
                         <!-- DESKTOP MENU -->
                         <div class="main-menu__wrap navbar navbar-expand-lg p-0">
-                            <nav class="main-menu collapse navbar-collapse">
-                                <ul>
-                                    <li><a href="#home"><span>Home</span></a></li>
-                                    <li><a href="#schedule"><span>Schedule</span></a></li>
-                                    <li><a href="#location"><span>Location</span></a></li>
-                                    <li><a href="#contact"><span>Contact</span></a></li>
+                            <nav class="main-menu collapse navbar-collapse justify-content-center" id="mainMenu">
+                                <ul class="navbar-nav mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
+
 
                         <!-- HAMBURGER BUTTON -->
                         <div class="header-bar-mobile side-menu d-lg-none">
