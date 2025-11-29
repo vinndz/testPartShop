@@ -12,20 +12,20 @@
 
     <title>Yamaha 2025</title>
 
-    <link rel="shortcut icon" href="https://github.com/vinndz/testPartShop/assets/img/favicon.svg" type="images/x-icon">
+    <link rel="shortcut icon" href="https://vinndz.github.io/testPartShop/assets/img/favicon.svg" type="images/x-icon">
 
     <!-- css include -->
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/animate.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/swiper.min.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/odometer.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/mousecursor.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/nice-select.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/custom-fonts.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/main.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/animate.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/odometer.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/mousecursor.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/nice-select.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/custom-fonts.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/main.css">
 
     <style>
         /* Hilangkan bullet */
@@ -169,25 +169,45 @@
             display: none !important;
         }
 
-        /* test */
-        .accordion-item { margin-bottom: 15px; border-radius: 10px; overflow: hidden; border: 1px solid #ddd; }
-        .accordion-header { width: 100%; text-align: left; background: #f5f5f5; padding: 15px; cursor: pointer; font-size: 18px; font-weight: bold; border: none; outline: none; transition: 0.3s; }
-        .accordion-header:hover { background: #eaeaea; }
-        .accordion-body { display: none; padding: 15px; animation: fadeIn 0.4s ease; }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .schedule-table thead {
+            background: #1e3a8a; /* biru elegan */
+            color: white;
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .schedule-table tbody tr:hover {
+            background: #f3f4f6;
+        }
+
+        .schedule-title {
+            font-weight: 600;
+        }
+
+        /* RESPONSIVE MODE */
+      @media (max-width: 768px) {
+            .schedule-table th,
+            .schedule-table td {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+        }
 
 
-        .card { background: white; padding: 12px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-        .card h4 { margin: 0; font-size: 16px; font-weight: bold; }
-        .card p { margin: 3px 0 0; font-size: 14px; color: #444; }
 
-
-        /* Category Colors */
-        .awarding .accordion-header { background: #ffe8a6; }
-        .doorprize .accordion-header { background: #dff6ff; }
-        .closing .accordion-header { background: #ffe0e6; }
-
-
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+        
  
 
     </style>
@@ -227,7 +247,7 @@
                 <div class="header__wrap ul_li_between">
                     <div class="xb-header-logo">
                         <a href="index.html" class="logo1">
-                            <img src="assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
+                            <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
                         </a>
                     </div>
                     <div class="main-menu__wrap  navbar navbar-expand-lg p-0">
@@ -251,7 +271,7 @@
                         <div class="xb-header-menu-scroll">
                             <div class="xb-menu-close xb-hide-xl xb-close"></div>
                             <div class="xb-logo-mobile xb-hide-xl">
-                            <a href="index.html" rel="home"><img src="assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
+                            <a href="index.html" rel="home"><img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
                             <div class="xb-header-mobile-search xb-hide-xl">
                                <ul>
                                     <li><a href="#home"><span>Home</span></a></li>
@@ -275,8 +295,8 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-        <!-- <section class="hero hero-style pos-rel bg_img" data-background="assets/img/bg/hero_bg.jpg"> -->
-        <section class="hero hero-style pos-rel bg_img" data-background="assets/img/background/background.png">
+        <!-- <section class="hero hero-style pos-rel bg_img" data-background="https://vinndz.github.io/testPartShop/assets/img/bg/hero_bg.jpg"> -->
+        <section class="hero hero-style pos-rel bg_img" data-background="https://vinndz.github.io/testPartShop/assets/img/background/background.png">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -291,7 +311,7 @@
                                 <div class="xb-hero-location-wrap wow fadeInUp" data-wow-delay="450ms" data-wow-duration="600ms">
                                     <div class="xb-hero-location-item">
                                         <div class="xb-img">
-                                            <img src="assets/img/icon/location-icon-yellow.svg" alt="">
+                                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/location-icon-yellow.svg" alt="">
                                         </div>
                                         <p class="xb-location">
                                             <span>Venue:</span> <br>
@@ -300,7 +320,7 @@
                                     </div>
                                     <div class="xb-hero-location-item">
                                         <div class="xb-img">
-                                            <img src="assets/img/icon/calendar-icon-yellow.png" alt="">
+                                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/calendar-icon-yellow.png" alt="">
                                         </div>
                                         <p class="xb-location">
                                             <span>Date: </span> <br>
@@ -338,7 +358,7 @@
         <div class="gardiant-bg pt-295">
 
             <!-- schedule start --> 
-            <!-- <section class="schedule-section pos-rel" id="schedule">
+            <section class="schedule-section pos-rel" id="schedule">
                 <div class="container">
                     <div class="xb-schedule-table-wrap">
                         <div class="row justify-content-center">
@@ -354,156 +374,93 @@
                             </div>
                         </div>
 
-                        <div class="table-responsive wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-                            <table class="table xb-schedule-table">
+                        <div class="table-responsive">
+                            <table class="schedule-table">
                                 <thead>
                                     <tr>
                                         <th>No.</th>
                                         <th>Time</th>
-                                        <th>Duration</th>
                                         <th>Activity</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
-
                                     <tr>
-                                        <td>1</td>
-                                        <td>15:30 – 16:00</td>
-                                        <td>30 min</td>
-                                        <td><span class="schedule-title">Registration All Participants</span></td>
+                                        <td data-label="No.">1</td>
+                                        <td data-label="Time">15:30 – 16:00</td>
+                                        <td data-label="Activity">Registration</td>
                                     </tr>
 
                                     <tr>
-                                        <td>2</td>
-                                        <td>17:13 – 17:15</td>
-                                        <td>2 min</td>
-                                        <td>MC Closing & Opening Dinner</td>
+                                        <td data-label="No.">2</td>
+                                        <td data-label="Time">17:15 – 17:45</td>
+                                        <td data-label="Activity">Break | Praying Time</td>
                                     </tr>
 
                                     <tr>
-                                        <td>3</td>
-                                        <td>17:15 – 17:45</td>
-                                        <td>30 min</td>
-                                        <td>Break | Praying Time</td>
+                                        <td data-label="No.">3</td>
+                                        <td data-label="Time">17:45 – 19:00</td>
+                                        <td data-label="Activity">Dinner + Entertainment</td>
                                     </tr>
 
                                     <tr>
-                                        <td>4</td>
-                                        <td>17:45 – 18:45</td>
-                                        <td>1 hour</td>
-                                        <td>Dinner + Entertainment (Singer Home Band)</td>
+                                        <td data-label="No.">4</td>
+                                        <td data-label="Time">19:00 – 19:03</td>
+                                        <td data-label="Activity">MC Greetings</td>
                                     </tr>
 
                                     <tr>
-                                        <td>5</td>
-                                        <td>18:45 – 18:50</td>
-                                        <td>5 min</td>
-                                        <td>Attention Start by VO MC</td>
+                                        <td data-label="No.">5</td>
+                                        <td data-label="Time">19:03 – 19:08</td>
+                                        <td data-label="Activity">BOD Appreciation Speech</td>
                                     </tr>
 
                                     <tr>
-                                        <td>6</td>
-                                        <td>18:50 – 19:00</td>
-                                        <td>10 min</td>
-                                        <td>Opening Bumper & Dance</td>
+                                        <td data-label="No.">6</td>
+                                        <td data-label="Time">19:08 – 19:14</td>
+                                        <td data-label="Activity">MC Bridging & Video Play</td>
                                     </tr>
 
                                     <tr>
-                                        <td>7</td>
-                                        <td>19:00 – 19:03</td>
-                                        <td>3 min</td>
-                                        <td>MC Greetings</td>
+                                        <td data-label="No.">7</td>
+                                        <td data-label="Time">19:14 – 19:27</td>
+                                        <td data-label="Activity">Awarding – 7 Category Reward</td>
                                     </tr>
 
                                     <tr>
-                                        <td>8</td>
-                                        <td>19:03 – 19:08</td>
-                                        <td>5 min</td>
-                                        <td>BOD Appreciation Speech</td>
+                                        <td data-label="No.">8</td>
+                                        <td data-label="Time">19:27 – 19:37</td>
+                                        <td data-label="Activity">Door Prize Announcement (Session 1)</td>
                                     </tr>
 
                                     <tr>
-                                        <td>9</td>
-                                        <td>19:08 – 19:14</td>
-                                        <td>6 min</td>
-                                        <td>MC Bridging & Video Play</td>
+                                        <td data-label="No.">9</td>
+                                        <td data-label="Time">19:37 – 19:47</td>
+                                        <td data-label="Activity">Entertainment (Session 1)</td>
                                     </tr>
 
                                     <tr>
-                                        <td>10</td>
-                                        <td>19:14 – 19:24</td>
-                                        <td>10 min</td>
-                                        <td>Awarding – 7 Category Reward</td>
+                                        <td data-label="No.">10</td>
+                                        <td data-label="Time">19:47 – 20:00</td>
+                                        <td data-label="Activity">Door Prize Announcement (Session 2)</td>
                                     </tr>
 
                                     <tr>
-                                        <td>11</td>
-                                        <td>19:24 – 19:27</td>
-                                        <td>3 min</td>
-                                        <td>MC Bridging</td>
+                                        <td data-label="No.">11</td>
+                                        <td data-label="Time">20:00 – 20:35</td>
+                                        <td data-label="Activity">Entertainment (Session 2)</td>
                                     </tr>
 
                                     <tr>
-                                        <td>12</td>
-                                        <td>19:27 – 19:37</td>
-                                        <td>10 min</td>
-                                        <td>Door Prize Announcement (Session 1)</td>
+                                        <td data-label="No.">12</td>
+                                        <td data-label="Time">20:35 – 20:40</td>
+                                        <td data-label="Activity">Closing Speech</td>
                                     </tr>
 
                                     <tr>
-                                        <td>13</td>
-                                        <td>19:37 – 19:47</td>
-                                        <td>10 min</td>
-                                        <td>Entertainment (Session 1)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>14</td>
-                                        <td>19:47 – 19:57</td>
-                                        <td>10 min</td>
-                                        <td>Door Prize Announcement (Session 2)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>15</td>
-                                        <td>19:57 – 20:00</td>
-                                        <td>3 min</td>
-                                        <td>MC Bridging</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>16</td>
-                                        <td>20:00 – 20:35</td>
-                                        <td>35 min</td>
-                                        <td>Entertainment (Session 2)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>17</td>
-                                        <td>20:35 – 20:40</td>
-                                        <td>5 min</td>
-                                        <td>Closing Speech</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>18</td>
-                                        <td>20:40 – 20:45</td>
-                                        <td>5 min</td>
-                                        <td>MC Bridging</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>19</td>
-                                        <td>20:45 – 20:55</td>
-                                        <td>10 min</td>
-                                        <td>Photo Documentation All Partshop</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>20</td>
-                                        <td>20:55 – 21:00</td>
-                                        <td>5 min</td>
-                                        <td>MC Closing</td>
+                                        <td data-label="No.">13</td>
+                                        <td data-label="Time">20:45 – 21:00</td>
+                                        <td data-label="Activity">Photo Documentation All Partshop</td>
                                     </tr>
 
                                 </tbody>
@@ -512,173 +469,94 @@
 
                     </div>
                 </div>
-            </section> -->
-            <!-- Accordion Schedule Section -->
-            <section class="schedule-section pos-rel" id="schedule">
-                <div class="container mx-auto p-4">
-                <h2 class="text-center text-3xl font-bold mb-6">Event Schedule</h2>
-
-
-                <div class="accordion" id="scheduleAccordion">
-
-
-                <!-- Group 1 -->
-                <div class="accordion-item">
-                <button class="accordion-header">Opening & Registration</button>
-                <div class="accordion-body">
-                <div class="card">
-                <h4>Registration All Participants</h4>
-                <p>15:30 - 16:00</p>
-                </div>
-                <div class="card">
-                <h4>MC Closing & Opening Dinner</h4>
-                <p>17:13 - 17:15</p>
-                </div>
-                </div>
-                </div>
-
-
-                <!-- Group 2 -->
-                <div class="accordion-item">
-                <button class="accordion-header">Dinner & Entertainment</button>
-                <div class="accordion-body">
-                <div class="card">
-                <h4>Break | Praying Time</h4>
-                <p>17:15 - 17:45</p>
-                </div>
-                <div class="card">
-                <h4>Dinner + Entertainment (Singer Home Band)</h4>
-                <p>17:45 - 18:45</p>
-                </div>
-                </div>
-                </div>
-
-
-                <!-- Group 3 -->
-                <div class="accordion-item awarding">
-                <button class="accordion-header">Awarding Session</button>
-                <div class="accordion-body">
-                <div class="card">
-                <h4>BOD Appreciation Speech</h4>
-                <p>19:03 - 19:08</p>
-                </div>
-                <div class="card">
-                <h4>Awarding - 7 Category Reward</h4>
-                <p>19:14 - 19:24</p>
-                </div>
-                </div>
-                </div>
-
-
-                <!-- Group 4 -->
-                <div class="accordion-item doorprize">
-                <button class="accordion-header">Doorprize Session</button>
-                <div class="accordion-body">
-                <div class="card">
-                <h4>Doorprize Announcement (Sesi 1)</h4>
-                <p>19:27 - 19:37</p>
-                </div>
-                <div class="card">
-                <h4>Doorprize Announcement (Sesi 2)</h4>
-                <p>19:47 - 19:57</p>
-                </div>
-                </div>
-                </div>
-
-
-                <!-- Group 5 -->
-                <div class="accordion-item closing">
-                <button class="accordion-header">Closing & Documentation</button>
-                <div class="accordion-body">
-                <div class="card">
-                <h4>Photo Documentation All Partshop</h4>
             </section>
-
-            <!-- schedule end -->            
+            
+            
+<
         </div>
 
         <!-- JOIN SECTION -->
        <!-- JOIN SECTION - PREMIUM MODERN -->
-<section style="padding: 100px 0; background:#f7f9fc;" id="location">
-    <div class="container">
-        <div class="row align-items-center">
+        <section style="padding: 100px 0; background:#f7f9fc;" id="location">
+            <div class="container">
+                <div class="row align-items-center">
 
-            <!-- LEFT -->
-            <div class="col-lg-6 col-md-12 mb-5">
-                <div style="padding-right: 20px;">
+                    <!-- LEFT -->
+                    <div class="col-lg-6 col-md-12 mb-5">
+                        <div style="padding-right: 20px;">
 
-                    <!-- Small Accent Line -->
-                    <div style="width: 60px; height: 4px; background:#0056d2; border-radius: 4px; margin-bottom: 18px;"></div>
+                            <!-- Small Accent Line -->
+                            <div style="width: 60px; height: 4px; background:#0056d2; border-radius: 4px; margin-bottom: 18px;"></div>
 
-                    <h2 style="font-size: 44px; font-weight: 800; color:#111; line-height: 1.2;">
-                        Yamaha Part Shop  
-                        <span style="color:#0056d2;">Business Meeting</span>
-                    </h2>
+                            <h2 style="font-size: 44px; font-weight: 800; color:#111; line-height: 1.2;">
+                                Yamaha Part Shop  
+                                <span style="color:#0056d2;">Business Meeting</span>
+                            </h2>
 
-                    <p style="font-size: 18px; margin-top: 18px; color:#555; max-width: 500px;">
-                        Event gathering diselenggarakan di 
-                        <strong>Hotel Mulia Jakarta</strong>.  
-                        Silakan cek detail lokasi dan jadwal di bawah.
-                    </p>
+                            <p style="font-size: 18px; margin-top: 18px; color:#555; max-width: 500px;">
+                                Event gathering diselenggarakan di 
+                                <strong>Hotel Mulia Jakarta</strong>.  
+                                Silakan cek detail lokasi dan jadwal di bawah.
+                            </p>
 
-                    <!-- EVENT INFO BOX -->
-                    <div style="
-                        background:#fff; 
-                        padding: 25px 28px; 
-                        border-radius: 14px; 
-                        margin-top: 28px; 
-                        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-                        border: 1px solid #eee;
-                    ">
-                        <ul style="line-height: 1.9; font-size: 17px; margin:0; padding:0; list-style:none; color:#333;">
-                            <li><strong>Lokasi:</strong> Hotel Mulia Jakarta</li>
-                            <li><strong>Tanggal:</strong> 4 Desember 2025</li>
-                            <li><strong>Waktu:</strong> 17:00 WIB</li>
-                        </ul>
+                            <!-- EVENT INFO BOX -->
+                            <div style="
+                                background:#fff; 
+                                padding: 25px 28px; 
+                                border-radius: 14px; 
+                                margin-top: 28px; 
+                                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                                border: 1px solid #eee;
+                            ">
+                                <ul style="line-height: 1.9; font-size: 17px; margin:0; padding:0; list-style:none; color:#333;">
+                                    <li><strong>Lokasi:</strong> Hotel Mulia Jakarta</li>
+                                    <li><strong>Tanggal:</strong> 4 Desember 2025</li>
+                                    <li><strong>Waktu:</strong> 17:00 WIB</li>
+                                </ul>
 
-                        <!-- <a href="#register"
-                            style="
-                                display: inline-block;
-                                margin-top: 22px;
-                                padding: 12px 30px;
-                                background: #ffb400;
-                                color: #000;
-                                font-weight: 700;
-                                border-radius: 10px;
-                                transition: 0.3s;
-                                text-decoration:none;
-                            "
-                            onmouseover="this.style.background='#ffcf4d'"
-                            onmouseout="this.style.background='#ffb400'">
-                            Daftar Sekarang
-                        </a> -->
+                                <!-- <a href="#register"
+                                    style="
+                                        display: inline-block;
+                                        margin-top: 22px;
+                                        padding: 12px 30px;
+                                        background: #ffb400;
+                                        color: #000;
+                                        font-weight: 700;
+                                        border-radius: 10px;
+                                        transition: 0.3s;
+                                        text-decoration:none;
+                                    "
+                                    onmouseover="this.style.background='#ffcf4d'"
+                                    onmouseout="this.style.background='#ffb400'">
+                                    Daftar Sekarang
+                                </a> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- RIGHT MAP -->
+                    <div class="col-lg-6 col-md-12">
+                        <div style="
+                            width:100%; 
+                            height:420px; 
+                            border-radius: 18px; 
+                            overflow:hidden; 
+                            box-shadow:0 6px 28px rgba(0,0,0,0.18); 
+                            border: 1px solid #e3e3e3;
+                        ">
+                            <iframe
+                                src="https://www.google.com/maps?q=Hotel+Mulia+Jakarta&output=embed"
+                                allowfullscreen=""
+                                loading="lazy"
+                                style="width:100%; height:100%; border:0;">
+                            </iframe>
+                        </div>
                     </div>
 
                 </div>
             </div>
-
-            <!-- RIGHT MAP -->
-            <div class="col-lg-6 col-md-12">
-                <div style="
-                    width:100%; 
-                    height:420px; 
-                    border-radius: 18px; 
-                    overflow:hidden; 
-                    box-shadow:0 6px 28px rgba(0,0,0,0.18); 
-                    border: 1px solid #e3e3e3;
-                ">
-                    <iframe
-                        src="https://www.google.com/maps?q=Hotel+Mulia+Jakarta&output=embed"
-                        allowfullscreen=""
-                        loading="lazy"
-                        style="width:100%; height:100%; border:0;">
-                    </iframe>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
 
 
@@ -697,12 +575,12 @@
                     </div>
                     <div class="offer-item">
                         <div class="xb-inner ul_li">
-                            <div class="xb-location"><img src="assets/img/icon/location-icon-yellow02.svg" alt=""></div>
+                            <div class="xb-location"><img src="https://vinndz.github.io/testPartShop/assets/img/icon/location-icon-yellow02.svg" alt=""></div>
                             <p class="xb-vanue">Venue: Jakarta, <br> Hotel Mulia</p>
                         </div>
                     </div>
-                    <div class="offer-shape offer-shape--1"><img src="assets/img/shape/cup-shape01.png" alt=""></div>
-                    <div class="offer-shape offer-shape--2"><img src="assets/img/shape/cup-shape02.png" alt=""></div>
+                    <div class="offer-shape offer-shape--1"><img src="https://vinndz.github.io/testPartShop/assets/img/shape/cup-shape01.png" alt=""></div>
+                    <div class="offer-shape offer-shape--2"><img src="https://vinndz.github.io/testPartShop/assets/img/shape/cup-shape02.png" alt=""></div>
                 </div>
             </div>
         </section>
@@ -845,7 +723,7 @@
                             text-align:center;
                             box-shadow:0 6px 20px rgba(0,0,0,0.1);
                         ">
-                            <img src="assets/img/icon/whatsapp.svg" width="50" style="margin-bottom:15px;" alt="">
+                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/whatsapp.svg" width="50" style="margin-bottom:15px;" alt="">
                             <h4 style="font-size:20px; font-weight:700;">WhatsApp</h4>
                             <p style="margin:10px 0 5px; font-size:17px; color:#444;">+62 812-3456-7890</p>
 
@@ -874,7 +752,7 @@
                             text-align:center;
                             box-shadow:0 6px 20px rgba(0,0,0,0.1);
                         ">
-                            <img src="assets/img/icon/phone.svg" width="50" style="margin-bottom:15px;" alt="">
+                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/phone.svg" width="50" style="margin-bottom:15px;" alt="">
                             <h4 style="font-size:20px; font-weight:700;">Phone</h4>
                             <p style="margin:10px 0 5px; font-size:17px; color:#444;">(021) 5678-1234</p>
 
@@ -903,7 +781,7 @@
                             text-align:center;
                             box-shadow:0 6px 20px rgba(0,0,0,0.1);
                         ">
-                            <img src="assets/img/icon/mail.svg" width="50" style="margin-bottom:15px;" alt="">
+                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/mail.svg" width="50" style="margin-bottom:15px;" alt="">
                             <h4 style="font-size:20px; font-weight:700;">Email</h4>
                             <p style="margin:10px 0 5px; font-size:17px; color:#444;">event.support@mail.com</p>
 
@@ -959,45 +837,30 @@
 </div>
 
 <!-- jquery include -->
-<script src="assets/js/jquery-3.7.1.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/appear.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/parallaxie.js"></script>
-<script src="assets/js/parallax.min.js"></script>
-<script src="assets/js/parallax-scroll.js"></script>
-<script src="assets/js/odometer.min.js"></script>
-<script src="assets/js/touchspin.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/jquery.marquee.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jqueryui.js"></script>
-<script src="assets/js/easing.min.js"></script>
-<script src="assets/js/scrollspy.js"></script>
-<script src="assets/js/gsap.js"></script>
-<script src="assets/js/magiccursor.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/jquery.countdown.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/jquery-3.7.1.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/swiper.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/wow.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/appear.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/parallaxie.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/parallax.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/parallax-scroll.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/odometer.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/touchspin.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/isotope.pkgd.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.nice-select.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.marquee.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/jqueryui.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/easing.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/scrollspy.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/gsap.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/magiccursor.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/ScrollTrigger.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.countdown.min.js"></script>
+<script src="https://vinndz.github.io/testPartShop/assets/js/main.js"></script>
 
 </body>
 
 </html>
-
-<script>
-document.querySelectorAll(".accordion-header").forEach(button => {
-    button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-    const isOpen = content.style.display === "block";
-
-
-    document.querySelectorAll(".accordion-body").forEach(body => body.style.display = "none");
-
-
-    content.style.display = isOpen ? "none" : "block";
-    });
-});
-</script>
