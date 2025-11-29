@@ -28,6 +28,94 @@
     <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/main.css">
 
     <style>
+
+        .hero-mobile {
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px; /* dikurangi dari 120px */
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-mobile::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(1px);
+        }
+
+        .hero-mobile .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LOGO */
+        .hero-logo {
+            width: 150px; /* default ukuran desktop lebih kecil */
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* Event Name */
+        .hero-event-name {
+            font-size: 28px; /* default mobile */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 20px rgba(255, 255, 255, 1);
+        }
+
+        /* Year */
+        .hero-year {
+            font-size: 50px; /* default mobile */
+            font-weight: 800;
+            margin-bottom: 25px;
+            color:white;
+        }
+
+        /* BOX (Venue / Date) */
+        .hero-box {
+            background: rgba(255,255,255,0.15);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-box .box-title {
+            font-size: 16px;
+            color: #FFD43B;
+            font-weight: 600;
+        }
+
+        .hero-box .box-value {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        /* Desktop Responsive */
+        @media (min-width: 768px) {
+            .hero-logo { width: 200px;  }
+            .hero-event-name { font-size: 48px; }
+            .hero-year { font-size: 50px; margin-bottom: 30px; }
+            .hero-box { padding: 20px 25px; margin-bottom: 40px; }
+            .hero-box .box-title { font-size: 18px; }
+            .hero-box .box-value { font-size: 24px; }
+        }
+
+        /* Large Desktop */
+        @media (min-width: 1200px) {
+            .hero-logo { width: 250px; margin-top:60px;}
+            .hero-event-name { font-size: 60px; margin-top:30px;}
+            .hero-year { font-size: 50px; margin-bottom: 100px; margin-top:30px;}
+        }
+
+
+
         /* Hilangkan bullet */
         .xb-header-mobile-search ul {
             list-style: none;
@@ -46,7 +134,7 @@
             display: block;
             font-size: 18px;
             font-weight: 500;
-            color: #00bfff;           /* atau warna kamu */
+            color: #00a2ffac;           /* atau warna kamu */
             padding: 10px 15px;
             border-radius: 8px;
             text-decoration: none;
@@ -210,136 +298,145 @@
                 padding: 10px 12px;
             }
         }
-
-
-
-        
  
+        .header__wrap {
+            opacity: 0.5 !important;
+        }
 
     </style>
 </head>
 
 <body class="business_forum">
 
-<!-- backtotop-start -->
-<div class="xb-backtotop">
-    <a href="#" class="scroll">
-        <i class="far fa-arrow-up"></i>
-    </a>
-</div>
-<!-- backtotop-end -->
-
-<!-- Preloader-Start -->
-<div id="preloader" class="preloader">
-    <div class="preloader-inner-wrap">
-        <div class="preloader-inner">
-            <div class="main-loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <!-- backtotop-start -->
+        <div class="xb-backtotop">
+            <a href="#" class="scroll">
+                <i class="far fa-arrow-up"></i>
+            </a>
         </div>
-    </div>
-</div>
-<!-- Preloader-end -->
+        <!-- backtotop-end -->
 
-<div class="body_wrap o-clip">
-
-    <!-- header start -->
-    <header id="home" class="header-area header-style header-transparent"> 
-        <div class="xb-header stricky">
-            <div class="container-fluid p-0">
-                <div class="header__wrap ul_li_between">
-                    <div class="xb-header-logo">
-                        <a href="index.html" class="logo1">
-                            <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
-                        </a>
-                    </div>
-                    <div class="main-menu__wrap  navbar navbar-expand-lg p-0">
-                        <nav class="main-menu collapse navbar-collapse">
-                            <ul>
-                                <li><a href="#home"><span>Home</span></a></li>
-                                <li><a href="#schedule"><span>Schedule</span></a></li>
-                                <li><a href="#location"><span>Location</span></a></li>
-                                <li><a href="#contact"><span data-text="Contact">Contact</span></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header-bar-mobile side-menu d-lg-none">
-                        <a class="xb-nav-mobile" href="javascript:void(0);">
-                            <i class="far fa-bars"></i>
-                        </a>
+        <!-- Preloader-Start -->
+        <div id="preloader" class="preloader">
+            <div class="preloader-inner-wrap">
+                <div class="preloader-inner">
+                    <div class="main-loader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
-                <div class="xb-header-wrap">
-                    <div class="xb-header-menu">
-                        <div class="xb-header-menu-scroll">
-                            <div class="xb-menu-close xb-hide-xl xb-close"></div>
-                            <div class="xb-logo-mobile xb-hide-xl">
-                            <a href="index.html" rel="home"><img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
-                            <div class="xb-header-mobile-search xb-hide-xl">
-                               <ul>
+            </div>
+        </div>
+        <!-- Preloader-end -->
+
+    <div class="body_wrap o-clip">
+
+       <!-- header start -->
+        <header id="home" class="header-area header-style header-transparent"> 
+            <div class="xb-header stricky">
+                <div class="container-fluid p-0">
+                    <div class="header__wrap ul_li_between" style="bacground: transparent;">
+
+                        <!-- LOGO -->
+                        <!-- <div class="xb-header-logo">
+                            <a href="index.html" class="logo1">
+                                <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
+                            </a>
+                        </div> -->
+
+                        <!-- DESKTOP MENU -->
+                        <div class="main-menu__wrap navbar navbar-expand-lg p-0">
+                            <nav class="main-menu collapse navbar-collapse">
+                                <ul>
                                     <li><a href="#home"><span>Home</span></a></li>
                                     <li><a href="#schedule"><span>Schedule</span></a></li>
                                     <li><a href="#location"><span>Location</span></a></li>
-                                    <li><a href="#contact"><span data-text="Contact">Contact</span></a></li>
+                                    <li><a href="#contact"><span>Contact</span></a></li>
                                 </ul>
-                            </div>
+                            </nav>
+                        </div>
+
+                        <!-- HAMBURGER BUTTON -->
+                        <div class="header-bar-mobile side-menu d-lg-none">
+                            <a class="xb-nav-mobile" href="javascript:void(0);">
+                                <i class="far fa-bars"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="xb-header-menu-backdrop"></div>
+
+                    <!-- MOBILE MENU -->
+                    <div class="xb-header-wrap">
+                        <div class="xb-header-menu">
+                            <div class="xb-header-menu-scroll">
+
+                                <!-- CLOSE BUTTON -->
+                                <div class="xb-menu-close xb-hide-xl xb-close"></div>
+
+                                <!-- MOBILE LOGO -->
+                                <div class="xb-logo-mobile xb-hide-xl">
+                                    <a href="index.html" rel="home">
+                                        <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
+                                    </a>
+                                </div>
+
+                                <!-- MOBILE NAV -->
+                                <div class="xb-header-mobile-search xb-hide-xl">
+                                    <ul>
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#schedule">Schedule</a></li>
+                                        <li><a href="#location">Location</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="xb-header-menu-backdrop"></div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- header end -->
+        </header>
+        <!-- header end -->
 
-    <!-- sidebar-info end -->
-    <div class="body-overlay"></div>
+
+        <!-- sidebar-info end -->
+        <div class="body-overlay"></div>
         
     <!-- main area start -->
     <main>
         <!-- hero start -->
         <!-- <section class="hero hero-style pos-rel bg_img" data-background="https://vinndz.github.io/testPartShop/assets/img/bg/hero_bg.jpg"> -->
-        <section class="hero hero-style pos-rel bg_img" data-background="https://vinndz.github.io/testPartShop/assets/img/background/background.png">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="xb-hero_content">
-                            <div class="xb-hero-heading">
-                                <div class="sub-heading wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-                                    <p class="sub-title" style="font-size:28px;">Yamaha Part shop business meeting</p>
-                                    <h3 class="number">2025</h3>
-                                </div>
-                            </div>
-                            <div class="xb-hero-bottom ul_li_between">
-                                <div class="xb-hero-location-wrap wow fadeInUp" data-wow-delay="450ms" data-wow-duration="600ms">
-                                    <div class="xb-hero-location-item">
-                                        <div class="xb-img">
-                                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/location-icon-yellow.svg" alt="">
-                                        </div>
-                                        <p class="xb-location">
-                                            <span>Venue:</span> <br>
-                                            Hotel Mulia Jakarta
-                                        </p>
-                                    </div>
-                                    <div class="xb-hero-location-item">
-                                        <div class="xb-img">
-                                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/calendar-icon-yellow.png" alt="">
-                                        </div>
-                                        <p class="xb-location">
-                                            <span>Date: </span> <br>
-                                            4 Desember
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="hero-mobile" style="background-image:url('assets/img/background/background.png');">
+            <div class="container text-center">
+
+                <!-- LOGO -->
+                <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.png" class="hero-logo" alt="Logo">
+
+                <!-- NAMA EVENT -->
+                <p class="hero-event-name">Yamaha Part Shop Business Meeting</p>
+
+                <!-- TAHUN -->
+                <h1 class="hero-year">2025</h1>
+
+                <!-- VENUE -->
+                <div class="hero-box">
+                    <span class="box-title">Venue:</span>
+                    <p class="box-value">Hotel Mulia Jakarta</p>
                 </div>
+
+                <!-- DATE -->
+                <div class="hero-box">
+                    <span class="box-title">Date:</span>
+                    <p class="box-value">4 Desember</p>
+                </div>
+
             </div>
         </section>
+
         <!-- hero end -->
 
         <!-- brand start -->
@@ -582,116 +679,6 @@
         </section>
         <!-- offer end -->
 
-        <!-- FORM SECTION - PREMIUM MODERN -->
-        <!-- <section style="padding: 110px 0; background:#f7f9fc;">
-            <div class="container">
-
-                <div class="sec-title text-center mb-5">
-                    <h2 style="font-size: 42px; font-weight: 800; color:#111;">
-                        Registration Form
-                    </h2>
-                    <p style="font-size: 18px; color:#555; margin-top:10px;">
-                        Fill out the form below to join the conference
-                    </p>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-10">
-
-                        <div style="
-                            background:#fff;
-                            padding: 40px 45px;
-                            border-radius: 18px;
-                            box-shadow:0 6px 28px rgba(0,0,0,0.1);
-                            border:1px solid #eee;
-                        ">
-
-                            <form action="#" method="post">
-
-                                <div class="mb-4">
-                                    <label style="font-weight:600; color:#333; margin-bottom:6px; display:block;">
-                                        Your Name*
-                                    </label>
-                                    <input type="text" required
-                                        style="
-                                            width:100%;
-                                            padding:14px 18px;
-                                            border-radius:10px;
-                                            border:1px solid #ccc;
-                                            font-size:16px;
-                                        ">
-                                </div>
-                                <div class="mb-4">
-                                    <label style="font-weight:600; color:#333; margin-bottom:6px; display:block;">
-                                        Your Email*
-                                    </label>
-                                    <input type="email" required
-                                        style="
-                                            width:100%;
-                                            padding:14px 18px;
-                                            border-radius:10px;
-                                            border:1px solid #ccc;
-                                            font-size:16px;
-                                        ">
-                                </div>
-
-                                <div class="mb-4">
-                                    <label style="font-weight:600; color:#333; margin-bottom:6px; display:block;">
-                                        Phone Number*
-                                    </label>
-                                    <input type="text" required
-                                        style="
-                                            width:100%;
-                                            padding:14px 18px;
-                                            border-radius:10px;
-                                            border:1px solid #ccc;
-                                            font-size:16px;
-                                        ">
-                                </div>
-
-                                <div class="mb-4">
-                                    <label style="font-weight:600; color:#333; margin-bottom:6px; display:block;">
-                                        Address*
-                                    </label>
-                                    <input type="text" required
-                                        style="
-                                            width:100%;
-                                            padding:14px 18px;
-                                            border-radius:10px;
-                                            border:1px solid #ccc;
-                                            font-size:16px;
-                                        ">
-                                </div>
-
-                                <div class="text-center mt-4">
-                                    <button type="submit"
-                                        style="
-                                            padding:14px 34px;
-                                            background:#ffb400;
-                                            color:#000;
-                                            font-weight:700;
-                                            font-size:18px;
-                                            border:none;
-                                            border-radius:10px;
-                                            cursor:pointer;
-                                            transition:0.3s;
-                                        "
-                                        onmouseover="this.style.background='#ffcf48'"
-                                        onmouseout="this.style.background='#ffb400'">
-                                        Submit Here
-                                    </button>
-                                </div>
-
-                            </form>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section> -->
-
 
         <!-- cta start -->
         <!-- CONTACT PERSON SECTION -->
@@ -703,15 +690,15 @@
                             Contact Person
                         </h2>
                         <p style="color:#e8e8e8; font-size:18px; margin-top:10px;">
-                            Hubungi kami untuk informasi lebih lanjut mengenai acara.
+                            Call or chat us for any questions or inquiries.
                         </p>
                     </div>
                 </div>
 
-                <div class="row mt-none-30">
+                <div class="row mt-none-30 justify-content-center">
 
                     <!-- WhatsApp -->
-                    <div class="col-lg-6 col-md-6 mt-30">
+                    <div class="col-lg-4 col-md-6 mt-30">
                         <div style="
                             background:white;
                             border-radius:16px;
@@ -721,9 +708,9 @@
                         ">
                             <img src="https://vinndz.github.io/testPartShop/assets/img/icon/whatsapp.svg" width="50" style="margin-bottom:15px;" alt="">
                             <h4 style="font-size:20px; font-weight:700;">WhatsApp</h4>
-                            <p style="margin:10px 0 5px; font-size:17px; color:#444;">+62 812-3456-7890</p>
+                            <p style="margin:10px 0 5px; font-size:17px; color:#444;">+62 812-8631-0388</p>
 
-                            <a href="https://wa.me/6281234567890" target="_blank"
+                            <a href="https://wa.me/6281286310388" target="_blank"
                                 style="
                                     display:inline-block;
                                     margin-top:12px;
@@ -739,65 +726,8 @@
                         </div>
                     </div>
 
-                    <!-- Phone -->
-                    <div class="col-lg-6 col-md-6 mt-30">
-                        <div style="
-                            background:white;
-                            border-radius:16px;
-                            padding:30px;
-                            text-align:center;
-                            box-shadow:0 6px 20px rgba(0,0,0,0.1);
-                        ">
-                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/phone.svg" width="50" style="margin-bottom:15px;" alt="">
-                            <h4 style="font-size:20px; font-weight:700;">Phone</h4>
-                            <p style="margin:10px 0 5px; font-size:17px; color:#444;">(021) 5678-1234</p>
-
-                            <a href="tel:02156781234"
-                                style="
-                                    display:inline-block;
-                                    margin-top:12px;
-                                    padding:10px 26px;
-                                    background:#ffb400;
-                                    color:black;
-                                    font-weight:700;
-                                    border-radius:10px;
-                                    text-decoration:none;
-                                ">
-                                Call Now
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <!-- <div class="col-lg-4 col-md-6 mt-30">
-                        <div style="
-                            background:white;
-                            border-radius:16px;
-                            padding:30px;
-                            text-align:center;
-                            box-shadow:0 6px 20px rgba(0,0,0,0.1);
-                        ">
-                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/mail.svg" width="50" style="margin-bottom:15px;" alt="">
-                            <h4 style="font-size:20px; font-weight:700;">Email</h4>
-                            <p style="margin:10px 0 5px; font-size:17px; color:#444;">event.support@mail.com</p>
-
-                            <a href="mailto:event.support@mail.com"
-                                style="
-                                    display:inline-block;
-                                    margin-top:12px;
-                                    padding:10px 26px;
-                                    background:#0056d2;
-                                    color:white;
-                                    font-weight:700;
-                                    border-radius:10px;
-                                    text-decoration:none;
-                                ">
-                                Send Email
-                            </a>
-                        </div>
-                    </div> -->
-
                 </div>
+
             </div>
         </section>
 
