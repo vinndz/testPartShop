@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="zxx">
-
 <head>
-
-    <!--========= Required meta tags =========-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -27,37 +24,162 @@
     <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/main.css">
     <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/style.css">
 
-</head>
+    <!-- override kecil biar tampilan rapi -->
+    <style>
+        /* Hero background fix (pakai path penuh) */
+        .hero-mobile {
+            background-image: url('https://vinndz.github.io/testPartShop/assets/img/background/background.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .hero-mobile::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+        }
+        .hero-mobile .container { position: relative; z-index: 2; }
 
+        .hero-logo { width: 220px; margin: 60px auto 20px; }
+        .hero-event-name {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+        .hero-year {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+        .hero-box {
+            background: rgba(255,255,255,0.16);
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-box .box-title {
+            color: #FFD43B;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .hero-box .box-value {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        /* Mobile sidebar fix */
+        .xb-header-wrap.d-lg-none {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            background: rgba(0,0,0,0.92);
+            backdrop-filter: blur(6px);
+            transition: max-height 0.3s ease;
+            z-index: 9999;
+        }
+        .xb-header-wrap.d-lg-none.active {
+            max-height: 480px;
+        }
+        .close-sidebar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .xb-header-mobile-search ul { list-style: none; margin: 0; padding: 0; }
+        .xb-header-mobile-search ul li { margin: 12px 0; text-align: center; }
+        .xb-header-mobile-search ul li a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #00a2ffac;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+        .xb-header-mobile-search ul li a:hover {
+            background:#FFE04B;
+            color:#000;
+            transform: translateX(6px);
+        }
+
+        /* Doorprize section */
+        .doorprize-section {
+            padding: 90px 20px 60px;
+            background: #fff;
+        }
+        .doorprize-title {
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #0a1a4a;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .doorprize-line {
+            width: 120px;
+            height: 6px;
+            margin: 0 auto 35px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #003c8f, #ffd400);
+        }
+        .doorprize-image {
+            width: 100%;
+            max-width: 620px;
+            border-radius: 14px;
+            box-shadow: 0 12px 38px rgba(0,0,0,0.18);
+        }
+
+        /* Brand section kosong → jadikan separator tipis saja */
+        .brand {
+            padding: 40px 0;
+            background: #f7f7f7;
+        }
+
+        /* Perbaiki opacity header yang terlalu redup */
+        .header__wrap { opacity: 1 !important; }
+    </style>
+</head>
 
 <body class="business_forum">
 
-        <!-- backtotop-start -->
-        <div class="xb-backtotop">
-            <a href="#" class="scroll">
-                <i class="far fa-arrow-up"></i>
-            </a>
-        </div>
-        <!-- backtotop-end -->
+    <!-- backtotop-start -->
+    <div class="xb-backtotop">
+        <a href="#" class="scroll">
+            <i class="far fa-arrow-up"></i>
+        </a>
+    </div>
+    <!-- backtotop-end -->
 
-        <!-- Preloader-Start -->
-        <div id="preloader" class="preloader">
-            <div class="preloader-inner-wrap">
-                <div class="preloader-inner">
-                    <div class="main-loader">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+    <!-- Preloader-Start -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner-wrap">
+            <div class="preloader-inner">
+                <div class="main-loader">
+                    <span></span><span></span><span></span><span></span>
                 </div>
             </div>
         </div>
-        <!-- Preloader-end -->
+    </div>
+    <!-- Preloader-end -->
 
     <div class="body_wrap o-clip">
 
-       <!-- header start -->
+        <!-- header start -->
         <header id="home" class="header-area header-style header-transparent">
             <div class="xb-header stricky">
                 <div class="container-fluid p-0">
@@ -99,10 +221,8 @@
                             <div class="mobile-hamburger text-center">
                                 <a class="xb-nav-mobile" href="javascript:void(0);">
                                     <i class="far fa-bars" style="font-size:24px; color:#fff;"></i>
-                                    
                                 </a>
                             </div>
-
                             <div class="mobile-logo-right">
                                 <a href="#home"><img src="https://vinndz.github.io/testPartShop/assets/img/background/part.jpg" alt="Logo Kanan" style="height:40px;"></a>
                             </div>
@@ -113,194 +233,131 @@
 
                     <!-- MOBILE MENU -->
                     <div class="xb-header-wrap d-lg-none">
-                <div class="xb-header-menu position-relative">
+                        <div class="xb-header-menu position-relative">
+                            <!-- CLOSE BUTTON -->
+                            <i class="fas fa-xmark close-sidebar"></i>
 
-                    <!-- CLOSE BUTTON (pojok kanan atas) -->
-                    <i class="fas fa-xmark close-sidebar"></i>
+                            <div class="xb-header-menu-scroll">
+                                <!-- LOGO TENGAH -->
+                                <div class="mobile-sidebar-logo text-center mb-3">
+                                    <a href="#home">
+                                        <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="Logo" style="height:60px;">
+                                    </a>
+                                </div>
 
-                    <div class="xb-header-menu-scroll">
-                        <!-- LOGO TENGAH -->
-                        <div class="mobile-sidebar-logo text-center mb-3">
-                            <a href="#home">
-                                <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="Logo" style="height:60px;">
-                            </a>
-                        </div>
-
-                        <!-- MENU -->
-                        <div class="xb-header-mobile-search">
-                            <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#schedule">Schedule</a></li>
-                                <li><a href="#location">Location</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
+                                <!-- MENU -->
+                                <div class="xb-header-mobile-search">
+                                    <ul>
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#schedule">Schedule</a></li>
+                                        <li><a href="#location">Location</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-
-
-
 
                 </div>
             </div>
         </header>
-
         <!-- header end -->
 
-
-        <!-- sidebar-info end -->
         <div class="body-overlay"></div>
-        
-    <!-- main area start -->
-    <main>
-        <!-- hero start -->
-        <!-- <section class="hero hero-style pos-rel bg_img" data-background="https://vinndz.github.io/testPartShop/assets/img/bg/hero_bg.jpg"> -->
-        <section class="hero-mobile" style="background-image:url('assets/img/background/background.png');">
-            <div class="container text-center">
 
-                <!-- LOGO -->
-                <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.png" class="hero-logo" alt="Logo">
+        <!-- main area start -->
+        <main>
 
-                <!-- NAMA EVENT -->
-                <p class="hero-event-name">Yamaha Part Shop Business Meeting</p>
+            <!-- hero start -->
+            <section class="hero-mobile">
+                <div class="container text-center">
+                    <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.png" class="hero-logo" alt="Logo">
+                    <p class="hero-event-name">Yamaha Part Shop Business Meeting</p>
+                    <h1 class="hero-year">2025</h1>
 
-                <!-- TAHUN -->
-                <h1 class="hero-year">2025</h1>
+                    <div class="hero-box">
+                        <span class="box-title">Venue:</span>
+                        <p class="box-value">Hotel Mulia Jakarta</p>
+                    </div>
 
-                <!-- VENUE -->
-                <div class="hero-box">
-                    <span class="box-title">Venue:</span>
-                    <p class="box-value">Hotel Mulia Jakarta</p>
-                </div>
-
-                <!-- DATE -->
-                <div class="hero-box">
-                    <span class="box-title">Date:</span>
-                    <p class="box-value">4 Desember</p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- hero end -->
-
-        <section class="doorprize-section">
-            <div class="container text-center">
-
-                <!-- Title -->
-                <h2 class="doorprize-title wow fadeInUp" data-wow-delay="150ms">
-                    DOORPRIZE
-                </h2>
-
-                <!-- Decorative line -->
-                <div class="doorprize-line wow fadeInUp" data-wow-delay="200ms"></div>
-
-                <!-- Image -->
-                <img 
-                    src="https://vinndz.github.io/testPartShop/assets/img/background/doorprize.jpeg" 
-                    alt="Doorprize" 
-                    class="doorprize-image wow fadeInUp" 
-                    data-wow-delay="250ms"
-                >
-
-            </div>
-        </section>
-
-
-        <!-- doorprize start -->
-        <section class="brand" data-bg-color="#f2f2f2">
-            <div class="xb-brand-wrap pt-130">
-                
-            </div>
-        </section>
-        <!-- brand end -->
-             
-        <div class="gardiant-bg pt-295">
-
-            <!-- schedule start --> 
-            <section class="schedule-section pos-rel" id="schedule">
-                <div class="container">
-                    <div class="xb-schedule-table-wrap">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10">
-                                <div class="sec-title text-center mb-60">
-                                    <span class="sub-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
-                                        Event Timeline
-                                    </span>
-                                    <h2 class="title wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
-                                        Yamaha Part Shop Business Meeting
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="table-responsive">
-                            <table class="schedule-table">
-                                <thead>
-                                    <tr>
-                                        <th>No.</th>
-                                        <th>Time</th>
-                                        <th>Activity</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td data-label="No.">1</td>
-                                        <td data-label="Time">15:30 – 16:00</td>
-                                        <td data-label="Activity">Registration</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">2</td>
-                                        <td data-label="Time">16:00 – 17:15</td>
-                                        <td data-label="Activity">Yamaha Part Shop Business Meeting</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">3</td>
-                                        <td data-label="Time">17:15 – 17:45</td>
-                                        <td data-label="Activity">Break</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">4</td>
-                                        <td data-label="Time">17:45 – 18:45</td>
-                                        <td data-label="Activity">Dinner</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">5</td>
-                                        <td data-label="Time">18:45 – 21:08</td>
-                                        <td data-label="Activity">Apreciation Night
-                                            <ul>
-                                                <li>Yamaha Part Shop Award</li>
-                                                <li>Yamaha Part Shop Reward</li>
-                                                <li>Entertainment</li>
-                                            </ul>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">6</td>
-                                        <td data-label="Time">21:00</td>
-                                        <td data-label="Activity">Closing</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-
+                    <div class="hero-box">
+                        <span class="box-title">Date:</span>
+                        <p class="box-value">4 Desember</p>
                     </div>
                 </div>
             </section>
-            
-            
-<
-        </div>
+            <!-- hero end -->
+
+            <!-- Doorprize -->
+            <section class="doorprize-section">
+                <div class="container text-center">
+                    <h2 class="doorprize-title wow fadeInUp" data-wow-delay="150ms">DOORPRIZE</h2>
+                    <div class="doorprize-line wow fadeInUp" data-wow-delay="200ms"></div>
+                    <img src="https://vinndz.github.io/testPartShop/assets/img/background/doorprize.jpeg"
+                         alt="Doorprize"
+                         class="doorprize-image wow fadeInUp"
+                         data-wow-delay="250ms">
+                </div>
+            </section>
+
+            <!-- brand separator -->
+            <section class="brand" data-bg-color="#f2f2f2">
+                <div class="xb-brand-wrap pt-130"></div>
+            </section>
+
+            <div class="gardiant-bg pt-295">
+                <!-- schedule start -->
+                <section class="schedule-section pos-rel" id="schedule">
+                    <div class="container">
+                        <div class="xb-schedule-table-wrap">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <div class="sec-title text-center mb-60">
+                                        <span class="sub-title wow fadeInUp" data-wow-delay="0ms" data-wow-duration="600ms">
+                                            Event Timeline
+                                        </span>
+                                        <h2 class="title wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">
+                                            Yamaha Part Shop Business Meeting
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="schedule-table">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Time</th>
+                                            <th>Activity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>1</td><td>15:30 – 16:00</td><td>Registration</td></tr>
+                                        <tr><td>2</td><td>16:00 – 17:15</td><td>Yamaha Part Shop Business Meeting</td></tr>
+                                        <tr><td>3</td><td>17:15 – 17:45</td><td>Break</td></tr>
+                                        <tr><td>4</td><td>17:45 – 18:45</td><td>Dinner</td></tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>18:45 – 21:08</td>
+                                            <td>
+                                                Apreciation Night
+                                                <ul>
+                                                    <li>Yamaha Part Shop Award</li>
+                                                    <li>Yamaha Part Shop Reward</li>
+                                                    <li>Entertainment</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr><td>6</td><td>21:00</td><td>Closing</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
 
         <!-- JOIN SECTION -->
        <!-- JOIN SECTION - PREMIUM MODERN -->
