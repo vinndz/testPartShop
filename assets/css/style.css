@@ -1,0 +1,523 @@
+.hero-mobile {
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px; /* dikurangi dari 120px */
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-mobile::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            /* backdrop-filter: blur(1px); */
+        }
+
+        .hero-mobile .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LOGO */
+        .hero-logo {
+            width: 180px; /* default ukuran desktop lebih kecil */
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        /* Event Name */
+        .hero-event-name {
+            font-size: 28px; /* default mobile */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 20px rgba(255, 255, 255, 1);
+        }
+
+        /* Year */
+        .hero-year {
+            font-size: 50px; /* default mobile */
+            font-weight: 800;
+            margin-bottom: 25px;
+            color:white;
+        }
+
+        /* BOX (Venue / Date) */
+        .hero-box {
+            background: rgba(255,255,255,0.15);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            /* backdrop-filter: blur(4px); */
+        }
+
+        .hero-box .box-title {
+            font-size: 16px;
+            color: #FFD43B;
+            font-weight: 600;
+        }
+
+        .hero-box .box-value {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 3px;
+        }
+
+        /* Desktop Responsive */
+        @media (min-width: 768px) {
+            .hero-logo { width: 200px;  }
+            .hero-event-name { font-size: 48px; }
+            .hero-year { font-size: 50px; margin-bottom: 30px; }
+            .hero-box { padding: 20px 25px; margin-bottom: 40px; }
+            .hero-box .box-title { font-size: 18px; }
+            .hero-box .box-value { font-size: 24px; }
+        }
+
+        /* Large Desktop */
+        @media (min-width: 1200px) {
+            .hero-logo { width: 250px; margin-top:60px;}
+            .hero-event-name { font-size: 60px; margin-top:30px;}
+            .hero-year { font-size: 50px; margin-bottom: 100px; margin-top:30px;}
+        }
+
+
+      /* Navbar Mobile */
+        .header-bar-mobile {
+            background: rgba(0,0,0,0.0); /* transparan */
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        /* Flex container untuk logo + hamburger */
+        .mobile-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo Kiri dan Kanan */
+        .mobile-logo-left img,
+        .mobile-logo-right img {
+            height: 40px;
+            transition: transform 0.3s;
+        }
+        .mobile-logo-left img:hover,
+        .mobile-logo-right img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hamburger di tengah */
+        .mobile-hamburger a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+        .mobile-hamburger a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Pastikan mobile bar selalu di atas header */
+        .mobile-bar-wrapper {
+            position: relative;
+            z-index: 9999;
+        }
+
+        /* Mobile menu selalu terlihat */
+        /* Hamburger/X icons */
+        .mobile-hamburger i {
+            background-color:#ffd503;
+            cursor: pointer;
+        }
+
+
+        /* Header Transparan */
+        .header-transparent {
+            background: rgba(255, 255, 255, 0.0);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            transition: all 0.4s ease;
+        }
+
+        /* Logo */
+        .logo {
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Desktop Menu */
+        .navbar-nav {
+            display: flex;
+            gap: 30px;
+        }
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FFE04B;
+            transition: 0.3s;
+        }
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFE04B;
+        }
+
+        /* Mobile menu styles */
+        .xb-header-mobile-search ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .xb-header-mobile-search ul li {
+            margin: 12px 0;
+            text-align: center;
+        }
+        .xb-header-mobile-search ul li a {
+            display: block;
+            font-size: 18px;
+            font-weight: 500;
+            color: #00a2ffac;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+        .xb-header-mobile-search ul li a:hover {
+            background: #FFE04B;
+            color: #000;
+            transform: translateX(6px);
+        }
+
+
+
+        /* Sidebar awal “tertutup” tapi tetap ada di DOM */
+        .xb-header-wrap.d-lg-none {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            position: absolute;
+            top: 60px; /* sesuai tinggi mobile bar */
+            left: 0;
+            width: 100%;
+            z-index: 9998;
+        }
+
+        /* Saat aktif / terbuka */
+        .xb-header-wrap.d-lg-none.active {
+             background: transparent !important;
+            max-height: 500px; /* cukup untuk menampilkan semua menu */
+        }
+
+        /* Logo di sidebar */
+        .mobile-sidebar-logos img {
+            height: 40px;
+        }
+        
+        .close-sidebar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            z-index: 10000; /* pastikan paling atas */
+            font-size: 24px;
+            color: #000;
+        }
+
+
+        .xb-header-menu-backdrop {
+            background: transparent !important;
+        }
+
+        /* .xb-header-wrap.d-lg-none {
+            display: none;
+        }
+
+        .xb-header-wrap.d-lg-none.mobile-active {
+            display: block;
+        } */
+
+        .brand.o-hidden {
+            overflow: visible !important;
+            background: #f2f2f2 !important;
+            box-shadow: none !important;
+            -webkit-mask-image: none !important;
+            mask-image: none !important;
+        }
+
+        .brand.o-hidden::before,
+    .brand.o-hidden::after {
+        content: none !important;
+    }
+    
+
+        /* ====== RESPONSIVE ====== */
+
+        /* Medium screen (tablet) */
+        @media (max-width: 992px) {
+            .xb-hero-bottom {
+                flex-direction: column !important;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .xb-hero-location-wrap {
+                justify-content: center;
+                gap: 40px;
+            }
+
+            .sub-title {
+                font-size: 24px !important;
+            }
+        }
+
+        /* Small screen (hp) */
+        @media (max-width: 768px) {
+
+            .xb-hero-bottom {
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .xb-hero-location-wrap {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 25px;
+            }
+
+            .xb-hero-location-item {
+                justify-content: center !important;
+                text-align: center !important;
+            }
+
+            .sub-title {
+                font-size: 20px !important;
+            }
+
+            h3.number {
+                font-size: 32px !important;
+            }
+        }
+
+        /* Extra small HP */
+        @media (max-width: 576px) {
+            .sub-title {
+                font-size: 18px !important;
+            }
+
+            .hero {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+        }
+
+
+        .footer {
+            background: #0a0a0a !important;
+            border-top: 2px solid #1a1a1a !important;
+        }
+
+        .footer-text {
+            color: #cfcfcf !important;
+            font-size: 15px !important;
+        }
+
+        .footer-link {
+            font-size: 17px !important;
+            color: #ffffff !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.5px !important;
+            text-decoration: none !important;
+        }
+
+        .footer-link:hover {
+            color: #0099ff !important;
+            transition: 0.3s !important;
+        }
+
+
+
+        
+        .sub-heading,
+        .sub-title {
+            border: none !important;
+        }
+
+        .sub-heading::before,
+        .sub-heading::after,
+        .sub-title::before,
+        .sub-title::after {
+            display: none !important;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .schedule-table thead {
+            background: #1e3a8a; /* biru elegan */
+            color: white;
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .schedule-table tbody tr:hover {
+            background: #f3f4f6;
+        }
+
+        .schedule-title {
+            font-weight: 600;
+        }
+
+        .schedule-table td[data-label="Time"],
+        .schedule-table td:nth-child(2),
+        .schedule-table th:nth-child(2) {
+            white-space: nowrap !important;
+        }
+
+        /* RESPONSIVE MODE */
+      @media (max-width: 768px) {
+            .schedule-table th,
+            .schedule-table td {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+        }
+ 
+        .header__wrap {
+            opacity: 0.5 !important;
+        }
+
+
+        /* Desktop saja */
+        @media (min-width: 992px) {
+    /* Pastikan wrapper flex dan center */
+    .main-menu__wrap.navbar {
+        display: flex;
+        justify-content: center; /* horizontal center */
+        align-items: center;     /* vertical center */
+        height: 70px;
+        background: white;       /* atau transparan */
+        border-radius: 12px;     /* jika ingin rounded */
+        padding: 0 20px;
+    }
+
+    /* Nav collapse flex center */
+    .main-menu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Menu horizontal rapi */
+    .main-menu .navbar-nav {
+        display: flex;
+        gap: 40px; /* jarak antar menu */
+        margin: 0; /* pastikan tidak ada margin */
+    }
+
+    .main-menu .nav-link {
+        line-height: 70px; /* vertical align */
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #000;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__wrap {
+        justify-content: center; /* dari space-between ke center */
+    }
+}
+
+
+
+/* ===== DOORPRIZE SECTION ===== */
+.doorprize-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.doorprize-title {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #0a1a4a; /* navy yamaha */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.doorprize-line {
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, #003c8f, #ffd400);
+    border-radius: 4px;
+    margin: 0 auto 35px;
+}
+
+.doorprize-image {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 12px 38px rgba(0,0,0,0.18);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Hover effect */
+.doorprize-image:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .doorprize-title {
+        font-size: 34px;
+    }
+    .doorprize-line {
+        width: 90px;
+        height: 5px;
+    }
+}
+
+.xb-header.stricky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+

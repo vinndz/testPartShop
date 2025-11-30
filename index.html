@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zxx">
 
@@ -11,350 +12,24 @@
 
     <title>Yamaha 2025</title>
 
-    <link rel="shortcut icon" href="https://vinndz.github.io/testPartShop/assets/img/favicon.svg" type="images/x-icon">
+    <link rel="shortcut icon" href="https://github.com/vinndz/testPartShop/assets/img/favicon.svg" type="images/x-icon">
 
     <!-- css include -->
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/animate.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/swiper.min.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/odometer.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/mousecursor.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/nice-select.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/custom-fonts.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="https://vinndz.github.io/testPartShop/assets/css/main.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/animate.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/swiper.min.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/odometer.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/mousecursor.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/nice-select.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/custom-fonts.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/main.css">
+    <link rel="stylesheet" href="https://github.com/vinndz/testPartShop/assets/css/style.css">
 
-    <style>
-
-        .hero-mobile {
-            background-size: cover;
-            background-position: center;
-            padding: 80px 20px; /* dikurangi dari 120px */
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-mobile::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.45);
-            backdrop-filter: blur(1px);
-        }
-
-        .hero-mobile .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* LOGO */
-        .hero-logo {
-            width: 180px; /* default ukuran desktop lebih kecil */
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-
-        /* Event Name */
-        .hero-event-name {
-            font-size: 28px; /* default mobile */
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            text-shadow: 0 4px 20px rgba(255, 255, 255, 1);
-        }
-
-        /* Year */
-        .hero-year {
-            font-size: 50px; /* default mobile */
-            font-weight: 800;
-            margin-bottom: 25px;
-            color:white;
-        }
-
-        /* BOX (Venue / Date) */
-        .hero-box {
-            background: rgba(255,255,255,0.15);
-            padding: 15px 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(4px);
-        }
-
-        .hero-box .box-title {
-            font-size: 16px;
-            color: #FFD43B;
-            font-weight: 600;
-        }
-
-        .hero-box .box-value {
-            font-size: 20px;
-            font-weight: 700;
-            margin-top: 3px;
-        }
-
-        /* Desktop Responsive */
-        @media (min-width: 768px) {
-            .hero-logo { width: 200px;  }
-            .hero-event-name { font-size: 48px; }
-            .hero-year { font-size: 50px; margin-bottom: 30px; }
-            .hero-box { padding: 20px 25px; margin-bottom: 40px; }
-            .hero-box .box-title { font-size: 18px; }
-            .hero-box .box-value { font-size: 24px; }
-        }
-
-        /* Large Desktop */
-        @media (min-width: 1200px) {
-            .hero-logo { width: 250px; margin-top:60px;}
-            .hero-event-name { font-size: 60px; margin-top:30px;}
-            .hero-year { font-size: 50px; margin-bottom: 100px; margin-top:30px;}
-        }
-
-
-
-        /* Hilangkan bullet */
-        .xb-header-mobile-search ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        /* Item menu */
-        .xb-header-mobile-search ul li {
-            margin: 12px 0;
-            text-align: left; 
-        }
-
-        /* Link menu */
-        .xb-header-mobile-search ul li a {
-            display: block;
-            font-size: 18px;
-            font-weight: 500;
-            color: #00a2ffac;           /* atau warna kamu */
-            padding: 10px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s ease;
-        }
-
-        /* Hover efek lebih menarik */
-        .xb-header-mobile-search ul li a:hover {
-            background: #FFE04B;   /* warna kuning Yamaha */
-            color: #000;
-            transform: translateX(6px);
-        }
-
-        /* Efek animasi teks */
-        .xb-header-mobile-search ul li a span {
-            display: inline-block;
-            transition: 0.3s ease;
-        }
-
-
-
-        /* ====== RESPONSIVE ====== */
-
-        /* Medium screen (tablet) */
-        @media (max-width: 992px) {
-            .xb-hero-bottom {
-                flex-direction: column !important;
-                text-align: center;
-                gap: 25px;
-            }
-
-            .xb-hero-location-wrap {
-                justify-content: center;
-                gap: 40px;
-            }
-
-            .sub-title {
-                font-size: 24px !important;
-            }
-        }
-
-        /* Small screen (hp) */
-        @media (max-width: 768px) {
-
-            .xb-hero-bottom {
-                flex-direction: column !important;
-                align-items: center !important;
-                text-align: center;
-                gap: 20px;
-            }
-
-            .xb-hero-location-wrap {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 25px;
-            }
-
-            .xb-hero-location-item {
-                justify-content: center !important;
-                text-align: center !important;
-            }
-
-            .sub-title {
-                font-size: 20px !important;
-            }
-
-            h3.number {
-                font-size: 32px !important;
-            }
-        }
-
-        /* Extra small HP */
-        @media (max-width: 576px) {
-            .sub-title {
-                font-size: 18px !important;
-            }
-
-            .hero {
-                padding-top: 50px;
-                padding-bottom: 50px;
-            }
-        }
-
-
-        .footer {
-            background: #0a0a0a !important;
-            border-top: 2px solid #1a1a1a !important;
-        }
-
-        .footer-text {
-            color: #cfcfcf !important;
-            font-size: 15px !important;
-        }
-
-        .footer-link {
-            font-size: 17px !important;
-            color: #ffffff !important;
-            font-weight: 600 !important;
-            letter-spacing: 0.5px !important;
-            text-decoration: none !important;
-        }
-
-        .footer-link:hover {
-            color: #0099ff !important;
-            transition: 0.3s !important;
-        }
-
-
-
-        
-        .sub-heading,
-        .sub-title {
-            border: none !important;
-        }
-
-        .sub-heading::before,
-        .sub-heading::after,
-        .sub-title::before,
-        .sub-title::after {
-            display: none !important;
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .schedule-table thead {
-            background: #1e3a8a; /* biru elegan */
-            color: white;
-        }
-
-        .schedule-table th, .schedule-table td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .schedule-table tbody tr:hover {
-            background: #f3f4f6;
-        }
-
-        .schedule-title {
-            font-weight: 600;
-        }
-
-        .schedule-table td[data-label="Time"],
-        .schedule-table td:nth-child(2),
-        .schedule-table th:nth-child(2) {
-            white-space: nowrap !important;
-        }
-
-        /* RESPONSIVE MODE */
-      @media (max-width: 768px) {
-            .schedule-table th,
-            .schedule-table td {
-                font-size: 14px;
-                padding: 10px 12px;
-            }
-        }
- 
-        .header__wrap {
-            opacity: 0.5 !important;
-        }
-
-
-        /* Desktop saja */
-        @media (min-width: 992px) {
-    /* Pastikan wrapper flex dan center */
-    .main-menu__wrap.navbar {
-        display: flex;
-        justify-content: center; /* horizontal center */
-        align-items: center;     /* vertical center */
-        height: 70px;
-        background: white;       /* atau transparan */
-        border-radius: 12px;     /* jika ingin rounded */
-        padding: 0 20px;
-    }
-
-    /* Nav collapse flex center */
-    .main-menu {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    /* Menu horizontal rapi */
-    .main-menu .navbar-nav {
-        display: flex;
-        gap: 40px; /* jarak antar menu */
-        margin: 0; /* pastikan tidak ada margin */
-    }
-
-    .main-menu .nav-link {
-        line-height: 70px; /* vertical align */
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #000;
-    }
-}
-
-@media (min-width: 992px) {
-    .header__wrap {
-        justify-content: center; /* dari space-between ke center */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-    </style>
 </head>
+
 
 <body class="business_forum">
 
@@ -384,14 +59,24 @@
     <div class="body_wrap o-clip">
 
        <!-- header start -->
-        <header id="home" class="header-area header-style header-transparent"> 
+        <header id="home" class="header-area header-style header-transparent">
             <div class="xb-header stricky">
                 <div class="container-fluid p-0">
-                    <div class="header__wrap ul_li_between" style="bacground: transparent;">
+
+                    <!-- HEADER WRAP -->
+                    <div class="header__wrap d-flex justify-content-between align-items-center">
+
+                        <!-- DESKTOP LOGO KIRI -->
+                        <div class="header-logo d-none d-lg-block">
+                            <a href="#home">
+                                <img src="https://github.com/vinndz/testPartShop/assets/img/background/yamalube.jpg" alt="Logo" class="logo" />
+                            </a>
+                        </div>
+
                         <!-- DESKTOP MENU -->
-                        <div class="main-menu__wrap navbar navbar-expand-lg p-0">
+                        <div class="main-menu__wrap navbar navbar-expand-lg d-none d-lg-flex">
                             <nav class="main-menu collapse navbar-collapse justify-content-center" id="mainMenu">
-                                <ul class="navbar-nav mb-2 mb-lg-0">
+                                <ul class="navbar-nav mb-0">
                                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
@@ -400,49 +85,69 @@
                             </nav>
                         </div>
 
-
-                        <!-- HAMBURGER BUTTON -->
-                        <div class="header-bar-mobile side-menu d-lg-none">
-                            <a class="xb-nav-mobile" href="javascript:void(0);">
-                                <i class="far fa-bars"></i>
+                        <!-- DESKTOP LOGO KANAN -->
+                        <div class="header-logo-right d-none d-lg-block">
+                            <a href="#home">
+                                <img src="https://github.com/vinndz/testPartShop/assets/img/background/part.jpg" alt="Logo" class="logo" />
                             </a>
                         </div>
-                    </div>
 
-                    <!-- MOBILE MENU -->
-                    <div class="xb-header-wrap">
-                        <div class="xb-header-menu">
-                            <div class="xb-header-menu-scroll">
+                        <!-- MOBILE BAR: Logo Kiri | Hamburger | Logo Kanan -->
+                        <div class="header-bar-mobile d-lg-none w-100 d-flex justify-content-between align-items-center px-3">
+                            <div class="mobile-logo-left">
+                                <a href="#home"><img src="https://github.com/vinndz/testPartShop/assets/img/background/yamalube.jpg" alt="Logo Kiri" style="height:40px;"></a>
+                            </div>
+                            <div class="mobile-hamburger text-center">
+                                <a class="xb-nav-mobile" href="javascript:void(0);">
+                                    <i class="far fa-bars" style="font-size:24px; color:#fff;"></i>
+                                    
+                                </a>
+                            </div>
 
-                                <!-- CLOSE BUTTON -->
-                                <div class="xb-menu-close xb-hide-xl xb-close"></div>
-
-                                <!-- MOBILE LOGO -->
-                                <div class="xb-logo-mobile xb-hide-xl">
-                                    <a href="index.html" rel="home">
-                                        <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.svg" alt="" style="width: 150px; height: auto;">
-                                    </a>
-                                </div>
-
-                                <!-- MOBILE NAV -->
-                                <div class="xb-header-mobile-search xb-hide-xl">
-                                    <ul>
-                                        <li><a href="#home">Home</a></li>
-                                        <li><a href="#schedule">Schedule</a></li>
-                                        <li><a href="#location">Location</a></li>
-                                        <li><a href="#contact">Contact</a></li>
-                                    </ul>
-                                </div>
-
+                            <div class="mobile-logo-right">
+                                <a href="#home"><img src="https://github.com/vinndz/testPartShop/assets/img/background/part.jpg" alt="Logo Kanan" style="height:40px;"></a>
                             </div>
                         </div>
 
-                        <div class="xb-header-menu-backdrop"></div>
                     </div>
+                    <!-- END HEADER WRAP -->
+
+                    <!-- MOBILE MENU -->
+                    <div class="xb-header-wrap d-lg-none">
+                <div class="xb-header-menu position-relative">
+
+                    <!-- CLOSE BUTTON (pojok kanan atas) -->
+                    <i class="fas fa-xmark close-sidebar"></i>
+
+                    <div class="xb-header-menu-scroll">
+                        <!-- LOGO TENGAH -->
+                        <div class="mobile-sidebar-logo text-center mb-3">
+                            <a href="#home">
+                                <img src="https://github.com/vinndz/testPartShop/assets/img/background/logo.svg" alt="Logo" style="height:60px;">
+                            </a>
+                        </div>
+
+                        <!-- MENU -->
+                        <div class="xb-header-mobile-search">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#schedule">Schedule</a></li>
+                                <li><a href="#location">Location</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
                 </div>
             </div>
         </header>
+
         <!-- header end -->
 
 
@@ -452,12 +157,12 @@
     <!-- main area start -->
     <main>
         <!-- hero start -->
-        <!-- <section class="hero hero-style pos-rel bg_img" data-background="https://vinndz.github.io/testPartShop/assets/img/bg/hero_bg.jpg"> -->
-        <section class="hero-mobile" style="background-image:url('https://vinndz.github.io/testPartShop/assets/img/background/background.png');">
+        <!-- <section class="hero hero-style pos-rel bg_img" data-background="https://github.com/vinndz/testPartShop/assets/img/bg/hero_bg.jpg"> -->
+        <section class="hero-mobile" style="background-image:url('https://github.com/vinndz/testPartShop/assets/img/background/background.png');">
             <div class="container text-center">
 
                 <!-- LOGO -->
-                <img src="https://vinndz.github.io/testPartShop/assets/img/background/logo.png" class="hero-logo" alt="Logo">
+                <img src="https://github.com/vinndz/testPartShop/assets/img/background/logo.png" class="hero-logo" alt="Logo">
 
                 <!-- NAMA EVENT -->
                 <p class="hero-event-name">Yamaha Part Shop Business Meeting</p>
@@ -482,11 +187,33 @@
 
         <!-- hero end -->
 
-        <!-- brand start -->
-        <section class="brand o-hidden" data-bg-color="#f2f2f2">
+        <section class="doorprize-section">
+            <div class="container text-center">
+
+                <!-- Title -->
+                <h2 class="doorprize-title wow fadeInUp" data-wow-delay="150ms">
+                    DOORPRIZE
+                </h2>
+
+                <!-- Decorative line -->
+                <div class="doorprize-line wow fadeInUp" data-wow-delay="200ms"></div>
+
+                <!-- Image -->
+                <img 
+                    src="https://github.com/vinndz/testPartShop/assets/img/background/doorprize.jpeg" 
+                    alt="Doorprize" 
+                    class="doorprize-image wow fadeInUp" 
+                    data-wow-delay="250ms"
+                >
+
+            </div>
+        </section>
+
+
+        <!-- doorprize start -->
+        <section class="brand" data-bg-color="#f2f2f2">
             <div class="xb-brand-wrap pt-130">
-                <div class="sec-title text-center mb-40">
-                </div>
+                
             </div>
         </section>
         <!-- brand end -->
@@ -529,74 +256,39 @@
 
                                     <tr>
                                         <td data-label="No.">2</td>
-                                        <td data-label="Time">17:15 – 17:45</td>
-                                        <td data-label="Activity">Break | Praying Time</td>
+                                        <td data-label="Time">16:00 – 17:15</td>
+                                        <td data-label="Activity">Yamaha Part Shop Business Meeting</td>
                                     </tr>
 
                                     <tr>
                                         <td data-label="No.">3</td>
-                                        <td data-label="Time">17:45 – 19:00</td>
-                                        <td data-label="Activity">Dinner + Entertainment</td>
+                                        <td data-label="Time">17:15 – 17:45</td>
+                                        <td data-label="Activity">Break</td>
                                     </tr>
 
                                     <tr>
                                         <td data-label="No.">4</td>
-                                        <td data-label="Time">19:00 – 19:03</td>
-                                        <td data-label="Activity">MC Greetings</td>
+                                        <td data-label="Time">17:45 – 18:45</td>
+                                        <td data-label="Activity">Dinner</td>
                                     </tr>
 
                                     <tr>
                                         <td data-label="No.">5</td>
-                                        <td data-label="Time">19:03 – 19:08</td>
-                                        <td data-label="Activity">BOD Appreciation Speech</td>
+                                        <td data-label="Time">18:45 – 21:08</td>
+                                        <td data-label="Activity">Apreciation Night
+                                            <ul>
+                                                <li>Yamaha Part Shop Award</li>
+                                                <li>Yamaha Part Shop Reward</li>
+                                                <li>Entertainment</li>
+                                            </ul>
+
+                                        </td>
                                     </tr>
 
                                     <tr>
                                         <td data-label="No.">6</td>
-                                        <td data-label="Time">19:08 – 19:14</td>
-                                        <td data-label="Activity">MC Bridging & Video Play</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">7</td>
-                                        <td data-label="Time">19:14 – 19:27</td>
-                                        <td data-label="Activity">Awarding – 7 Category Reward</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">8</td>
-                                        <td data-label="Time">19:27 – 19:37</td>
-                                        <td data-label="Activity">Door Prize Announcement (Session 1)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">9</td>
-                                        <td data-label="Time">19:37 – 19:47</td>
-                                        <td data-label="Activity">Entertainment (Session 1)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">10</td>
-                                        <td data-label="Time">19:47 – 20:00</td>
-                                        <td data-label="Activity">Door Prize Announcement (Session 2)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">11</td>
-                                        <td data-label="Time">20:00 – 20:35</td>
-                                        <td data-label="Activity">Entertainment (Session 2)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">12</td>
-                                        <td data-label="Time">20:35 – 20:40</td>
-                                        <td data-label="Activity">Closing Speech</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="No.">13</td>
-                                        <td data-label="Time">20:45 – 21:00</td>
-                                        <td data-label="Activity">Photo Documentation All Partshop</td>
+                                        <td data-label="Time">21:00</td>
+                                        <td data-label="Activity">Closing</td>
                                     </tr>
 
                                 </tbody>
@@ -711,12 +403,12 @@
                     </div>
                     <div class="offer-item">
                         <div class="xb-inner ul_li">
-                            <div class="xb-location"><img src="https://vinndz.github.io/testPartShop/assets/img/icon/location-icon-yellow02.svg" alt=""></div>
+                            <div class="xb-location"><img src="https://github.com/vinndz/testPartShop/assets/img/icon/location-icon-yellow02.svg" alt=""></div>
                             <p class="xb-vanue">Venue: Jakarta, <br> Hotel Mulia</p>
                         </div>
                     </div>
-                    <div class="offer-shape offer-shape--1"><img src="https://vinndz.github.io/testPartShop/assets/img/shape/cup-shape01.png" alt=""></div>
-                    <div class="offer-shape offer-shape--2"><img src="https://vinndz.github.io/testPartShop/assets/img/shape/cup-shape02.png" alt=""></div>
+                    <div class="offer-shape offer-shape--1"><img src="https://github.com/vinndz/testPartShop/assets/img/shape/cup-shape01.png" alt=""></div>
+                    <div class="offer-shape offer-shape--2"><img src="https://github.com/vinndz/testPartShop/assets/img/shape/cup-shape02.png" alt=""></div>
                 </div>
             </div>
         </section>
@@ -749,7 +441,7 @@
                             text-align:center;
                             box-shadow:0 6px 20px rgba(0,0,0,0.1);
                         ">
-                            <img src="https://vinndz.github.io/testPartShop/assets/img/icon/whatsapp.svg" width="50" style="margin-bottom:15px;" alt="">
+                            <img src="https://github.com/vinndz/testPartShop/assets/img/icon/whatsapp.svg" width="50" style="margin-bottom:15px;" alt="">
                             <h4 style="font-size:20px; font-weight:700;">WhatsApp</h4>
                             <p style="margin:10px 0 5px; font-size:17px; color:#444;">+62 812-8631-0388</p>
 
@@ -806,30 +498,51 @@
 </div>
 
 <!-- jquery include -->
-<script src="https://vinndz.github.io/testPartShop/assets/js/jquery-3.7.1.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/bootstrap.bundle.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/swiper.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/wow.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/appear.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/parallaxie.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/parallax.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/parallax-scroll.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/odometer.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/touchspin.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/isotope.pkgd.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.nice-select.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.marquee.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.magnific-popup.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/jqueryui.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/easing.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/scrollspy.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/gsap.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/magiccursor.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/ScrollTrigger.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/jquery.countdown.min.js"></script>
-<script src="https://vinndz.github.io/testPartShop/assets/js/main.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/jquery-3.7.1.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/swiper.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/wow.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/appear.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/parallaxie.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/parallax.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/parallax-scroll.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/odometer.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/touchspin.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/isotope.pkgd.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/jquery.nice-select.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/jquery.marquee.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/jqueryui.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/easing.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/scrollspy.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/gsap.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/magiccursor.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/ScrollTrigger.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/jquery.countdown.min.js"></script>
+<script src="https://github.com/vinndz/testPartShop/assets/js/main.js"></script>
 
 </body>
 
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerBtn = document.querySelector(".mobile-hamburger .xb-nav-mobile");
+    const sidebar      = document.querySelector(".xb-header-wrap.d-lg-none");
+    const closeBtn     = document.querySelector(".close-sidebar");
+
+    // buka sidebar
+    hamburgerBtn.addEventListener("click", () => {
+        sidebar.classList.add("active");
+    });
+
+    // tutup sidebar
+    closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+});
+
+
+</script>
+
